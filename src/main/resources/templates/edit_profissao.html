@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
 <head>
+<link rel="stylesheet" type="text/css" href="/Style.css">
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
@@ -34,39 +35,53 @@
 			</ul>
 		</div>
 	</nav>
-	<div align="center">
-		<h1>Alterar Profissão</h1>
-		<br />
-		<form action="#" th:action="@{/save}" th:object="${profissao}"
-			method="post">
-			<table border="0" cellpadding="10">
-				<tr>
-					<td>Código:</td>
-					<td><input type="text" th:field="*{id}" readonly="readonly" />
-					</td>
-				</tr>
-				<tr>
-					<td>Profissão:</td>
-					<td><input type="text" th:field="*{profissao}" /></td>
-				</tr>
-				<tr>
-					<td>Informações:</td>
-					<td><input type="text" th:field="*{informacao}" /></td>
-				</tr>
-				<tr>
-					<td>Salário:</td>
-					<td><input type="number" th:field="*{salario}" /></td>
-				</tr>
-				<tr>
-					<td>Capacitação:</td>
-					<td><input type="text" th:field="*{capacitacao}" /></td>
-				</tr>
-				<tr>
-					<td colspan="2"><button class="btn btn-primary" type="submit">Salvar</button>
-					</td>
-				</tr>
-			</table>
-		</form>
+	<div class="container">
+
+		<div class="jumbotron">
+
+			<div align="left">
+
+				<h1>Alterar Profissão</h1>
+				<br />
+				<form class="formAlterar" action="#" th:action="@{/save}"
+					th:object="${profissao}" method="post">
+					<table border="0" cellpadding="5">
+						<tr>
+							<td>Código:</td>
+							<td><input type="text" class="form-control" th:field="*{id}"
+								readonly="readonly" /></td>
+						</tr>
+						<tr>
+							<td>Profissão:</td>
+							<td><input type="text" class="form-control" width="48"
+								height="48" th:field="*{profissao}" /></td>
+						</tr>
+						<tr>
+							<td>Informações:</td>
+							<td><textarea class="textarea" type="text"
+									th:field="*{informacao}" /></td>
+						</tr>
+						<tr>
+							<td>Salário:</td>
+							<td><input type="number" class="form-control"
+								th:field="*{salario}" /></td>
+						</tr>
+						<tr>
+							<td>Capacitação:</td>
+							<td><input type="text" class="form-control"
+								th:field="*{capacitacao}" /></td>
+						</tr>
+						<tr>
+							<td colspan="2"><button class="btn btn-primary"
+									type="submit">Salvar</button></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+
+
+		</div>
+
 	</div>
 </body>
 </html>
