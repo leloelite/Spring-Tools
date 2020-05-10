@@ -1,9 +1,9 @@
-package com.example.demo2.repositorio;
+package com.example.demo2.application.repositorio;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.demo2.DemoModel;
+import com.example.demo2.application.models.Usuario;
 
 public interface UsuarioRepository extends
-JpaRepository<DemoModel, Long>{
+JpaRepository<Usuario, Long>{
 
 }

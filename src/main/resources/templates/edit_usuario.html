@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
  xmlns:th="http://www.thymeleaf.org">
@@ -5,7 +6,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <meta charset="utf-8" />
-<title>Cadastro de novo Usuário</title>
+<title>Alterar Usuário</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -33,48 +34,30 @@
     </form>
   </div>
 </nav>
-
- <div class="container">
-		
-	    <div class="jumbotron">
-
-	    	 <div align="center">
-<h3 class="text-muted" align="center">Cadastro de nova profissão</h3>
+ <div align="center">
+ <h1>Alterar Usuário</h1>
  <br />
  <form action="#" th:action="@{/save}" th:object="${usuario}"
  method="post">
- <table >
+ <table border="0" cellpadding="10">
  <tr>
- <td>Profissão:</td>
- <td><input type="text" th:field="*{profissao}" /></td>
+ <td>Código:</td>
+ <td>
+ <input type="text" th:field="*{id}" readonly="readonly"
+/>
+ </td>
  </tr>
  <tr>
- <td>Informação:</td>
- <td><input type="text" th:field="*{informacao}" /></td>
+ <td>Profisao:</td>
+ <td>
+ <input type="text" th:field="*{profissao}" />
+ </td>
  </tr>
  <tr>
- <td>Salario:</td>
- <td><input type="number" th:field="*{salario}" /></td>
- </tr>
-  <tr>
- <td>Capacitação:</td>
- <td><input type="text" th:field="*{capacitacao}" /></td>
- </tr>
- <tr>
- <td align="right" colspan="2"><button class="btn btn-success" type="submit">
- <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
- Salvar
- </button> </td>
+ <td colspan="2"><button type="submit">Salvar</button> </td>
  </tr>
  </table>
  </form>
  </div>
-
-
-	    </div>
-			
-	</div>
 </body>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script></body>
 </html>

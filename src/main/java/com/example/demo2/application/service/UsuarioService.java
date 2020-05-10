@@ -1,32 +1,33 @@
-package com.example.demo2.service;
+package com.example.demo2.application.service;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo2.DemoModel;
-import com.example.demo2.repositorio.UsuarioRepository;
+import com.example.demo2.application.models.Usuario;
+import com.example.demo2.application.repositorio.UsuarioRepository;
 
 @Service
 public class UsuarioService {
-@Autowired
- private UsuarioRepository repo;
 
- public List<DemoModel> listAll() {
- return repo.findAll();
- }
+	@Autowired
+	 private UsuarioRepository repo;
 
- public void save(DemoModel usuario) {
- repo.save(usuario);
- }
+	 public List<Usuario> listAll() {
+	 return repo.findAll();
+	 }
 
- public DemoModel get(long id) {
- DemoModel usr = repo.findById(id).get();
- return usr;
- }
+	 public void save(Usuario usuario) {
+	 repo.save(usuario);
+	 }
 
- public void delete(long id) {
- repo.deleteById(id);
- }
+	 public Usuario get(long id) {
+	 Usuario usr = repo.findById(id).get();
+	 return usr;
+	 }
+
+	 public void delete(long id) {
+	 repo.deleteById(id);
+	 }
 }
 

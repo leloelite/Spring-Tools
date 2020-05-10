@@ -1,44 +1,45 @@
-package com.example.demo2;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "usuario")
-public class DemoModel {
-
-
-	@Id
-	 @GeneratedValue(strategy=GenerationType.AUTO)
-	 private Long id;
-	 private String nome;
-
-	public DemoModel()
-	 {
-	 }
-	 public DemoModel(Long id, String nome)
-	 {
-	 this.id = id;
-	 this.nome = nome;
-	 }
-	 public Long getId()
-	 {
-	 return id;
-	 }
-	 public void setId(Long id)
-	 {
-	 this.id = id;
-	 }
-	 public String getNome()
-	 {
-	 return nome;
-	 }
-	 public void setNome(String nome)
-	 {
-	 this.nome = nome;
-	 }
-
-}
+package com.example.demo2.application.models;
+//package com.example.demo2.models;
+//
+//import javax.persistence.Entity;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.GenerationType;
+//import javax.persistence.Id;
+//import javax.persistence.Table;
+//
+//@Entity
+//@Table(name = "usuario")
+//public class DemoModel {
+//
+//
+//	@Id
+//	 @GeneratedValue(strategy=GenerationType.AUTO)
+//	 private Long id;
+//	 private String nome;
+//
+//	public DemoModel()
+//	 {
+//	 }
+//	 public DemoModel(Long id, String nome)
+//	 {
+//	 this.id = id;
+//	 this.nome = nome;
+//	 }
+//	 public Long getId()
+//	 {
+//	 return id;
+//	 }
+//	 public void setId(Long id)
+//	 {
+//	 this.id = id;
+//	 }
+//	 public String getNome()
+//	 {
+//	 return nome;
+//	 }
+//	 public void setNome(String nome)
+//	 {
+//	 this.nome = nome;
+//	 }
+//
+//}
