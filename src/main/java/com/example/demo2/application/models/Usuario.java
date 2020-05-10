@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
 @Entity
 @Table(name = "usuario")
 public class Usuario {
@@ -12,7 +13,7 @@ public class Usuario {
  @GeneratedValue(strategy=GenerationType.AUTO)
  private Long id;
  private String profissao;
- 
+ @Size(max = 8000)
 private String informacao;
  private double salario;
  private String capacitacao;

@@ -1,112 +1,104 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
- xmlns:th="http://www.thymeleaf.org">
+	xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="../../favicon.ico">
 <title>Home</title>
 
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+	crossorigin="anonymous"></script>
 <meta charset="utf-8" />
 </head>
 
 <meta charset="utf-8" />
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Profissões TI</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">Profissões TI</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Carreiras</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/new">Infomar Carreiras</a>
-      </li>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link" href="/">Home
+						<span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item"><a class="nav-link" href="/new">Infomar
+						Carreiras</a></li>
 
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-<h2 align="center">Profissões</h2>
+			</ul>
+		</div>
+	</nav>
+	<h2 align="center">Profissões</h2>
 
 
-<div id="accordion">
+	<div id="accordion">
 
-<tbody>
- <tr th:each="user : ${usuarios}">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h5 class="mb-0">
-        <button th:data-target="${'#colapse'+user.id}" th:aria-controls="${user.id}" class="btn btn-link" data-toggle="collapse" data-target="" aria-expanded="true" aria-controls="collapseOne">
+		<tbody>
+			<tr th:each="user : ${usuarios}">
+				<div class="card">
+					<div class="card-header" id="headingOne">
+						<h5 class="mb-0">
+							<button th:data-target="${'#colapse'+user.id}"
+								th:aria-controls="${user.id}" class="btn btn-link"
+								data-toggle="collapse" data-target="" aria-expanded="true"
+								aria-controls="collapseOne">
 
- <td th:text="${user.profissao}"></td>
+								<td th:text="${user.profissao}"></td>
 
-        </button>
-      </h5>
-    </div>
+							</button>
+						</h5>
+					</div>
 
-    <div th:id="'colapse'+${user.id}" id="" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-      <div class="card-body">
-  <td th:text="${user.informacao}"></td>
-<a align="rigth" th:href="@{'/edit/' + ${user.id}}">Editar</a>
-<a th:href="@{'/delete/' + ${user.id}}">Excluir</a>
+					<div th:id="'colapse'+${user.id}" id="" class="collapse"
+						aria-labelledby="headingOne" data-parent="#accordion">
+						<div class="card-body">
+							<td th:text="${user.informacao}"></td> <br> <b>Salário
+								médio:</b> R$
+							<td th:text="${user.salario}"></td> <br> <b>Capacitações:</b>
+							<td th:text="${user.capacitacao}"></td> <br> <br>
+							<td colspan="2"><a th:href="@{'/edit/' + ${user.id}}"
+								align="right" class="btn btn-success">Editar</a> <a
+								class="btn btn-danger" th:href="@{'/delete/' + ${user.id}}">Excluir</a>
+						</div>
+					</div>
+				</div>
+			</tr>
+		</tbody>
 
-      </div>
-    </div>
-  </div>
-   </tr>
- </tbody>
-
-</div>
-
-<!--  <div align="center">
- <h1>Lista de Usuário</h1>
- <a href="/new">Novo Usuário</a>
- <br/><br/>
- <table border="1" >
- <thead>
- <tr>
- <th>Código</th>
- <th>Profissão</th>
- <th>Informação</th>
-  <th>Capacitação</th>
-   <th>Salário</th>
- </tr>
- </thead>
- <tbody>
- <tr th:each="user : ${usuarios}">
- <td th:text="${user.id}">Código</td>
- <td th:text="${user.profissao}">Profissão</td>
-  <td th:text="${user.informacao}">Informação</td>
-   <td th:text="${user.capacitacao}">Capacitação</td>
-    <td th:text="${user.salario}">Salário</td>
- <td>
- <a th:href="@{'/edit/' + ${user.id}}">Editar</a>
- &nbsp;&nbsp;&nbsp;
-<a th:href="@{'/delete/' + ${user.id}}">Deletar</a>
- </td>
- </tr>
- </tbody>
- </table>
-</div> -->
+	</div>
 </body>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script></body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+	crossorigin="anonymous"></script>
+<script>
+	window.jQuery
+			|| document
+					.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')
+</script>
+<script src="/docs/4.4/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
+	crossorigin="anonymous"></script>
+</body>
 </html>

@@ -18,24 +18,12 @@ public class AppController {
 	
 	@Autowired UsuarioService service;
 	
-	 @RequestMapping("/caduser")
+	 @RequestMapping("/")
 	 public String lista(Model model)
 	 {
 	 model.addAttribute("usuarios", service.listAll());
 	 return "usuario";
 	 }
-	 
-	 @RequestMapping("/")
-	 public String lista()
-	 {
-	
-	 return "Ola mundo";
-	 }
-	 
-	 @RequestMapping("/welcome")
-		public String welcomepage() {
-			return "Welcome to Yawin Tutor";
-		}
 	 
 	@GetMapping("/new")
 	public String showNewUsuarioPage(Model model) {
@@ -47,7 +35,7 @@ public class AppController {
 	public String saveUsuario(@ModelAttribute("usuario") Usuario usuario) {
 	 service.save(usuario);
 
-	 return "redirect:/caduser";
+	 return "redirect:/";
 	}
 	@RequestMapping("/edit/{id}")
 	public ModelAndView showEditUsuarioPage(@PathVariable(name = "id") int id) {
@@ -60,7 +48,7 @@ public class AppController {
 	@RequestMapping("/delete/{id}")
 	public String deleteUsuario(@PathVariable(name = "id") int id) {
 	 service.delete(id);
-	 return "redirect:/caduser";
+	 return "redirect:/";
 	}
 
 	
