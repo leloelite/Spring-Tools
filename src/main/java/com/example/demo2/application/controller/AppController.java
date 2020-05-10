@@ -10,38 +10,38 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.demo2.application.models.Usuario;
-import com.example.demo2.application.service.UsuarioService;
+import com.example.demo2.application.models.Profissao;
+import com.example.demo2.application.service.ProfissaoService;
 
 @Controller
 public class AppController {
 	
-	@Autowired UsuarioService service;
+	@Autowired ProfissaoService service;
 	
 	 @RequestMapping("/")
 	 public String lista(Model model)
 	 {
 	 model.addAttribute("usuarios", service.listAll());
-	 return "usuario";
+	 return "profissao";
 	 }
 	 
 	@GetMapping("/new")
 	public String showNewUsuarioPage(Model model) {
-	 Usuario usuario = new Usuario();
-	 model.addAttribute("usuario", usuario);
-	 return "new_usuario";
+	 Profissao profissao = new Profissao();
+	 model.addAttribute("profissao", profissao);
+	 return "new_profissao";
 	}
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public String saveUsuario(@ModelAttribute("usuario") Usuario usuario) {
-	 service.save(usuario);
+	public String saveUsuario(@ModelAttribute("usuario") Profissao profissao) {
+	 service.save(profissao);
 
 	 return "redirect:/";
 	}
 	@RequestMapping("/edit/{id}")
 	public ModelAndView showEditUsuarioPage(@PathVariable(name = "id") int id) {
 	 ModelAndView mav = new ModelAndView("edit_usuario");
-	 Usuario usuario = service.get(id);
-	 mav.addObject("usuario", usuario);
+	 Profissao profissao = service.get(id);
+	 mav.addObject("profissao", profissao);
 
 	 return mav;
 	}

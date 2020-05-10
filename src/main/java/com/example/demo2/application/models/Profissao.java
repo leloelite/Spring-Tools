@@ -7,8 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 @Entity
-@Table(name = "usuario")
-public class Usuario {
+@Table(name = "profissao")
+public class Profissao {
 @Id
  @GeneratedValue(strategy=GenerationType.AUTO)
  private Long id;
@@ -18,10 +18,10 @@ private String informacao;
  private double salario;
  private String capacitacao;
 
-public Usuario()
+public Profissao()
  {
  }
- public Usuario(Long id, String profissao, String informacao, double salario, String capacitacao)
+ public Profissao(Long id, String profissao, String informacao, double salario, String capacitacao)
  {
 	 this.id = id;
 	 this.profissao = profissao;
