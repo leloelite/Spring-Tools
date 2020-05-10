@@ -1,4 +1,4 @@
-package com.example.demo2.application.controller;
+package com.profissionais.ti.application.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.demo2.application.models.Profissao;
-import com.example.demo2.application.service.ProfissaoService;
+import com.profissionais.ti.application.models.Profissao;
+import com.profissionais.ti.application.service.ProfissaoService;
 
 @Controller
 public class AppController {

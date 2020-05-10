@@ -1,11 +1,11 @@
-package com.example.demo2.application.service;
+package com.profissionais.ti.application.service;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo2.application.models.Profissao;
-import com.example.demo2.application.repositorio.ProfissaoRepository;
+import com.profissionais.ti.application.models.Profissao;
+import com.profissionais.ti.application.repositorio.ProfissaoRepository;
 
 @Service
 public class ProfissaoService {

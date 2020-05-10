@@ -1,4 +1,4 @@
-package com.example.demo2.application;
+package com.profissionais.ti.application;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,8 +9,8 @@ import org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConf
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
-import com.example.demo2.application.models.Profissao;
-import com.example.demo2.application.repositorio.ProfissaoRepository;
+import com.profissionais.ti.application.models.Profissao;
+import com.profissionais.ti.application.repositorio.ProfissaoRepository;
 
 @SpringBootApplication
 @EnableAutoConfiguration(exclude = {ErrorMvcAutoConfiguration.class})

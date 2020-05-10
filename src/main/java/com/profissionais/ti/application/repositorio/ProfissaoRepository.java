@@ -1,7 +1,7 @@
-package com.example.demo2.application.repositorio;
+package com.profissionais.ti.application.repositorio;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.demo2.application.models.Profissao;
+import com.profissionais.ti.application.models.Profissao;
 
 public interface ProfissaoRepository extends
 JpaRepository<Profissao, Long>{
