@@ -56,31 +56,31 @@
 	<div id="accordion">
 
 		<tbody>
-			<tr th:each="user : ${usuarios}">
+			<tr th:each="profissao : ${profissoes}">
 				<div class="card">
 					<div class="card-header" id="headingOne">
 						<h5 class="mb-0">
-							<button th:data-target="${'#colapse'+user.id}"
-								th:aria-controls="${user.id}" class="btn btn-link"
+							<button th:data-target="${'#colapse'+profissao.id}"
+								th:aria-controls="${profissao.id}" class="btn btn-link"
 								data-toggle="collapse" data-target="" aria-expanded="true"
 								aria-controls="collapseOne">
 
-								<td th:text="${user.profissao}"></td>
+								<td th:text="${profissao.profissao}"></td>
 
 							</button>
 						</h5>
 					</div>
 
-					<div th:id="'colapse'+${user.id}" id="" class="collapse"
+					<div th:id="'colapse'+${profissao.id}" id="" class="collapse"
 						aria-labelledby="headingOne" data-parent="#accordion">
 						<div class="card-body">
-							<td th:text="${user.informacao}"></td> <br> <b>Salário
+							<td th:text="${profissao.informacao}"></td> <br> <b>Salário
 								médio:</b> R$
-							<td th:text="${user.salario}"></td> <br> <b>Capacitações:</b>
-							<td th:text="${user.capacitacao}"></td> <br> <br>
-							<td colspan="2"><a th:href="@{'/edit/' + ${user.id}}"
+							<td th:text="${profissao.salario}"></td> <br> <b>Capacitações:</b>
+							<td th:text="${profissao.capacitacao}"></td> <br> <br>
+							<td colspan="2"><a th:href="@{'/edit/' + ${profissao.id}}"
 								align="right" class="btn btn-success">Editar</a> <a
-								class="btn btn-danger" th:href="@{'/delete/' + ${user.id}}">Excluir</a>
+								class="btn btn-danger" th:href="@{'/delete/' + ${profissao.id}}">Excluir</a>
 						</div>
 					</div>
 				</div>

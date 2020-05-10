@@ -21,32 +21,32 @@ public class AppController {
 	 @RequestMapping("/")
 	 public String lista(Model model)
 	 {
-	 model.addAttribute("usuarios", service.listAll());
+	 model.addAttribute("profissoes", service.listAll());
 	 return "profissao";
 	 }
 	 
 	@GetMapping("/new")
-	public String showNewUsuarioPage(Model model) {
+	public String showNewProfissaoPage(Model model) {
 	 Profissao profissao = new Profissao();
 	 model.addAttribute("profissao", profissao);
 	 return "new_profissao";
 	}
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public String saveUsuario(@ModelAttribute("usuario") Profissao profissao) {
+	public String saveProfissao(@ModelAttribute("usuario") Profissao profissao) {
 	 service.save(profissao);
 
 	 return "redirect:/";
 	}
 	@RequestMapping("/edit/{id}")
-	public ModelAndView showEditUsuarioPage(@PathVariable(name = "id") int id) {
-	 ModelAndView mav = new ModelAndView("edit_usuario");
+	public ModelAndView showEditProfissaoPage(@PathVariable(name = "id") int id) {
+	 ModelAndView mav = new ModelAndView("edit_profissao");
 	 Profissao profissao = service.get(id);
 	 mav.addObject("profissao", profissao);
 
 	 return mav;
 	}
 	@RequestMapping("/delete/{id}")
-	public String deleteUsuario(@PathVariable(name = "id") int id) {
+	public String deleteProfissao(@PathVariable(name = "id") int id) {
 	 service.delete(id);
 	 return "redirect:/";
 	}
